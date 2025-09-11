@@ -8,6 +8,7 @@ permissions:
 jobs:
   Plan:
     #uses: ariyansdev/terraform-templates/.github/workflows/terraform_azure_template.yml@main
+    uses: LearnTechOps/Reusable-Templates/.github/workflows/terraform_azure_backend_template.yaml@main
     with:
       terraform_dir: ./terraform
       tfvars_file: terraform.tfvars
