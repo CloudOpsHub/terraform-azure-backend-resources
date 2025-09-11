@@ -1,0 +1,18 @@
+on:
+  pull_request:
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  Plan:
+    #uses: ariyansdev/terraform-templates/.github/workflows/terraform_azure_template.yml@main
+    with:
+      terraform_dir: ./terraform
+      tfvars_file: terraform.tfvars
+      run_apply: false
+    secrets:
+      ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
+      ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
+      ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
