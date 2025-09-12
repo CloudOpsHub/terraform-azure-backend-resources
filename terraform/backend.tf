@@ -1,8 +1,8 @@
 terraform {
   backend "azurerm" {
-    resource_group_name  = "rg-webapp-prod-ins"
-    storage_account_name = "stgariyansdemo"
-    container_name       = "tfstate"
-    key                  = "terraform-test1.tfstate"
+    resource_group_name  = "RG-INC-STG-01"
+    storage_account_name = "ariyans"
+    container_name       = "terraform"
+    key                  = "CloudOps.tfstate"
   }
 }
