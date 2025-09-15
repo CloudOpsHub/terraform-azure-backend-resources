@@ -4,7 +4,7 @@ resource_groups = {
     location = "East US"
     tags = {
       environment = "dev"
-      owner       = "dev-team1"
+      owner       = "dev-cloudops"
     }
   }
 }
